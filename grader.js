@@ -1,25 +1,4 @@
 #!/usr/bin/env node
-/*
-Automatically grade files for the presence of specified HTML tags/attributes.
-Uses commander.js and cheerio. Teaches command line application development
-and basic DOM parsing.
-
-References:
-
- + cheerio
-   - https://github.com/MatthewMueller/cheerio
-   - http://encosia.com/cheerio-faster-windows-friendly-alternative-jsdom/
-   - http://maxogden.com/scraping-with-node.html
-
- + commander.js
-   - https://github.com/visionmedia/commander.js
-   - http://tjholowaychuk.com/post/9103188408/commander-js-nodejs-command-line-interfaces-made-easy
-
- + JSON
-   - http://en.wikipedia.org/wiki/JSON
-   - https://developer.mozilla.org/en-US/docs/JSON
-   - https://developer.mozilla.org/en-US/docs/JSON#JSON_in_Firefox_2
-*/
 
 var fs = require('fs');
 var util = require('util');
@@ -64,16 +43,15 @@ var clone = function(fn) {
 };
 
 var saveUrlToFile = function(result, response){
-    if (result instanceof Error){
-    console.error('Error: ' + util.format(response.message));
+    if (result instanceof Error) {
+        console.error('Error: ' + util.format(response.message));
     } else {
-    var bufferFile = 'buffer.html';
-//  console.error("Wrote %s", 'buffer.html');
-    fs.writeFileSync(bufferFile, result);
-    var checkJson = checkHtmlFile(bufferFile, program.checks);
-    var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
-    fs.unlinkSync(bufferFile);
+        var temp = 'temp.html';
+        fs.writeFileSync(temp, result);
+        var checkJson = checkHtmlFile(temp, program.checks);
+        var outJson = JSON.stringify(checkJson, null, 4);
+        console.log(outJson);
+        fs.unlinkSync(temp);
     }
 }
 
@@ -81,15 +59,16 @@ if(require.main == module) {
     program
         .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
         .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
-    .option('-u, --url <url>', 'Url to check')
+        .option('-u, --url <url>', 'Url to validate')
         .parse(process.argv);
-    if (program.url){
-    rest.get(program.url).on('complete', saveUrlToFile);
-    } else if (program.file){
-    var checkJson = checkHtmlFile(program.file, program.checks);
-    var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
+    if (program.url) {
+        rest.get(program.url).on('complete', saveUrlToFile);
+    } else if (program.file) {
+        var checkJson = checkHtmlFile(program.file, program.checks);
+        var outJson = JSON.stringify(checkJson, null, 4);
+        console.log(outJson);
     }
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
+
