@@ -42,7 +42,7 @@ var clone = function(fn) {
     return fn.bind({});
 };
 
-var saveUrlToFile = function(result, response){
+var remoteToFile = function(result, response){
     if (result instanceof Error) {
         console.error('Error: ' + util.format(response.message));
     } else {
@@ -62,7 +62,7 @@ if(require.main == module) {
         .option('-u, --url <url>', 'Url to validate')
         .parse(process.argv);
     if (program.url) {
-        rest.get(program.url).on('complete', saveUrlToFile);
+        rest.get(program.url).on('complete', remoteToFile);
     } else if (program.file) {
         var checkJson = checkHtmlFile(program.file, program.checks);
         var outJson = JSON.stringify(checkJson, null, 4);
