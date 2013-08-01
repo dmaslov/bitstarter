@@ -11,8 +11,10 @@
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800"
+          rel="stylesheet" type="text/css">
     <style type="text/css">
+
       /* Large desktop */
       @media (min-width: 980px) {
         body {
@@ -105,49 +107,53 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <!-- <button type="button" class="btn btn-navbar"
+          <button type="button" class="btn btn-navbar"
                   data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button> -->
+          </button>
           <a class="brand" href="#">Bitstarter</a>
           <div class="nav-collapse collapse">
-            <!-- <ul class="nav">
+            <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
-            </ul> -->
+            </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+    <!-- http://stackoverflow.com/a/12270322 -->
     <div class="container">
       <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
       <!-- www.google.com/fonts/specimen/Ubuntu -->
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Smart Companion Toy</h1>
+          <h1>Product: Development Version</h1>
         </div>
       </div>
       <div class="row-fluid subheading">
         <div class="span12">
           <!-- Special typography from Bootstrap for lead paragraph. -->
           <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">You want your kid happy and smart? Give your child the Smart Companion Toy!</p>
+          <p class="lead">One sentence description.</p>
         </div>
       </div>
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
-          <iframe src="http://player.vimeo.com/video/70501458" width="480" height="300" frameborder="0"></iframe>
+          <img class="img-polaroid" alt="Placeholder" src="http://placehold.it/480x300">
         </div>
 
         <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
+          <div class="row-fluid">
           <div class="span8 offset2">
-            <div class="statistics">
+            <div class="row-fluid statistics">
               <div class="span4">
                 <!-- linediv-l and linediv-r give dividing lines that look
                 different in horizontal and vertical layouts, illustrating
@@ -168,6 +174,7 @@
               </div>
             </div>
           </div>
+          <div class="row-fluid">
           <div class="span10 offset1">
             <!-- Bootstrap progress bar -->
             <!-- http://twitter.github.io/bootstrap/components.html#progress -->
@@ -176,57 +183,76 @@
               <div class="bar bar-warning" style="width: 40%;"></div>
             </div>
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span6 offset3 order">
             <!-- Standard Bootstrap button. -->
             <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
             <button class="btn btn-success btn-large">Preorder</button>
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span8 offset2 social">
             <!-- Social buttons are not included in default Bootstrap. -->
             <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
             <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
             <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
           </div>
+          </div>
+        </div>
         </div>
       </div>
 
-      <div class="row-fluid">
+      <!-- Beyond this part the marketing copy begins. -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
+      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+      <!-- http://placehold.it -->
+      <div class="row-fluid section1">
         <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://i.imgur.com/pEUXHkq.png">
+          <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
         </div>
         <div class="span5 copy">
-          <ul>
-              <li>For Preschool Age / 2 years +</li>
-              <li>Social skills, wit and memory development.</li>
-              <li>Friendly look.</li>
-              <li>Soft and safe; impossible to get injured.</li>
-              <li>Light and easy to handle.</li>
-          </ul>
-          <h4>Why you need the Smart Companion Toy:</h4>
-          <p>Your kid is bored and sad when you have a job to do or lots of work around the house, or are simply tired – give your child the Smart Companion Toy. It will keep your kid occupied and entertained for hours. Moreover it will develop the child’s social skills, wit and memory.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
+            mollis justo velit at nunc. Fusce nec egestas sem. Donec
+            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
+            volutpat lorem ut congue malesuada. In facilisis scelerisque
+            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
+            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
+            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
+            rutrum, nunc leo tempus nisl, eu mollis justo velit at
+            nunc. Fusce nec egestas sem. Donec fringilla.
+          </p>
         </div>
       </div>
 
-      <div class="row-fluid">
-        <div class="span5 offset1 asset">
-          <h4>What the Smart Companion Toy does:</h4>
-          <p>When you touch or take the Toy it asks if you want to play. If you say ‘no’ it stops talking. If you say ‘yes’ it offers to sing a song, tell a story, lull you, count the items around or play music to dance. Depending on your ‘yes’ and ‘no’ answers the Toy provides with entertainments. The Toys’s body is sensible to touches. If you squeeze the Toy too hard or throw it on the floor it will ask you not to offend it again. If you stroke or hug the Toy gently it will say it’s happy to have you as a friend.</p>
+      <div class="row-fluid section2">
+        <div class="span5 offset1 copy copy-right">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
+            mollis justo velit at nunc. Fusce nec egestas sem. Donec
+            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
+            volutpat lorem ut congue malesuada. In facilisis scelerisque
+            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
+            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
+            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
+            rutrum, nunc leo tempus nisl, eu mollis justo velit at
+            nunc. Fusce nec egestas sem. Donec fringilla.
+          </p>
         </div>
-        <div class="span5 copy copy-right">
-          <img class="img-polaroid" src="http://i.imgur.com/3HljabQ.png">
+        <div class="span5 asset">
+          <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
         </div>
       </div>
 
-      <div class="row-fluid">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://i.imgur.com/QoMvqtN.jpg">
-        </div>
-        <div class="span5 copy copy-right">
-          <p>We are still working on our Companions’ skin. Very soon a kitten, puppy and little panda will see the World. And there is one more we are still thinking about – please share your thought and who knows maybe we will make your idea a reality.</p>
-        </div>
-      </div>
-
-      <!-- <div class="row-fluid faq">
+      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
+      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
+      <div class="row-fluid faq">
           <div class="span10 offset1">
             <h3>FAQ</h3>
             <div class="accordion" id="accordion2">
@@ -234,12 +260,12 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseOne">
-                    What inside?
+                    What does FAQ stand for?
                   </a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    It has several microprocessors inside of a plastic container wrapped by the soft hypoallergic cotton body. It’s easy to carry the Toy around and safe to play with.
+                    Frequently Asked Question.
                   </div>
                 </div>
               </div>
@@ -247,18 +273,19 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseTwo">
-                    What about money?
+                    What's a Frequently Asked Question?
                   </a>
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    We are still working on our Companions’ skin. Very soon a kitten, puppy and little panda will see the World.
+                    A question which is commonly asked by users.
                   </div>
                 </div>
               </div>
             </div>
           </div>
-      </div> -->
+
+      </div>
 
       <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
       <!-- http://creativecommons.org/licenses/ -->
